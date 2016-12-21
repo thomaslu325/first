@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <!-- 字符集的中文问题 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant><!-- internationalization -->
+    <!-- struts内修改配置后不需要重启服务的配置 -->
+    <constant name="struts.devMode" value="true"></constant>
+    <!-- 访问action里面的静态方法 -->
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+    <package name="ognl" namespace="/" extends="struts-default">
+    	<action name="ognl" class="com.dongyatu.struts2.ognl.OGNLAction">
+    		<result>/OGNL.jsp</result>
+    	</action>
+    	<action name="tags" class="com.dongyatu.struts2.ognl.TagsAction">
+    		<result>/tags.jsp</result>
+    	</action>
+    </package>
+    
+</struts>
